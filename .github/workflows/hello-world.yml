@@ -1,6 +1,12 @@
 name: Java CI
-on: push
-env: # Set the secret as an input
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+env:
   docker_username: ${{ secrets.DOCKER_USERNAME }}
   docker_password: ${{ secrets.DOCKER_PASSWORD }}
   GIT_COMMIT: ${{ github.sha }}
