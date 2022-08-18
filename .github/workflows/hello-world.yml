@@ -67,6 +67,6 @@ jobs:
       uses: actions/download-artifact@v1
       with:
         name: code
-        path: ./////Breaks
+        path: .
     - name: Execute performance test
       run: chmod +x ci/performance-test.sh && ci/performance-test.sh
